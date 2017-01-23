@@ -1,8 +1,8 @@
 <?php
 
-namespace Askedio\Laravel5ProfanityFilter\Tests;
+namespace Askedio\ProfanityFilter\Tests;
 
-use Askedio\Laravel5ProfanityFilter\ProfanityFilter;
+use Askedio\ProfanityFilter\ProfanityFilter;
 
 class ProfanityFilterTest extends TestCase
 {

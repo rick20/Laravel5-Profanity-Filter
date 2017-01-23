@@ -3,12 +3,12 @@ Filter profanity, or other words, out of a string using Laravels [localization](
 
 # Installation
 ```
-composer require askedio/laravel5-profanity-filter
+composer require askedio/profanity-filter
 ```
 ## Register in `config/app.php`
 Register the service providers to enable the package:
 ```
-Askedio\Laravel5ProfanityFilter\Providers\ProfanityFilterServiceProvider::class,
+Askedio\ProfanityFilter\ProfanityFilterServiceProvider::class,
 ```
 
 ## Configure
@@ -24,13 +24,13 @@ You can create your own list of words, per language, in `resources/lang/[languag
 
 # Usage
 ```php
-$string = app('profanityFilter')->filter('something with a bad word');
+$string = app('profanity-filter')->filter('something with a bad word');
 ```
 The `$string` will contain the filtered result.
 
 You can also define things inline
 ```php
-$string = app('profanityFilter')->replaceWith('#')->replaceFullWords(false)->filter('something with a bad word'));
+$string = app('profanity-filter')->replaceWith('#')->replaceFullWords(false)->filter('something with a bad word'));
 ```
 
 # Options
@@ -54,7 +54,7 @@ $string = app('profanityFilter')->replaceWith('#')->replaceFullWords(false)->fil
 You can also use this package without Laravel.
 
 ```php
-use Askedio\Laravel5ProfanityFilter\ProfanityFilter;
+use Askedio\ProfanityFilter\ProfanityFilter;
 
 $config = []; // Data from `resources/config/profanity.php`
 $badWordsArray = []; // Data from `resources/lang/[lang]/profanity.php`

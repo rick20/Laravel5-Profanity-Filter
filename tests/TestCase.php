@@ -1,6 +1,6 @@
 <?php
 
-namespace Askedio\Laravel5ProfanityFilter\Tests;
+namespace Askedio\ProfanityFilter\Tests;
 
 abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
 {
@@ -22,7 +22,7 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
 
         $app->make(\Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
-        $app->register(\Askedio\Laravel5ProfanityFilter\Providers\ProfanityFilterServiceProvider::class);
+        $app->register(\Askedio\ProfanityFilter\ProfanityFilterServiceProvider::class);
 
         return $app;
     }
